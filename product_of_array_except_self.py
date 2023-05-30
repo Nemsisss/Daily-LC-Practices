@@ -29,5 +29,3 @@ class Solution:
         for i in range(length):
             toRet[i] = left[i]*right[i]
         return toRet
-
-        
