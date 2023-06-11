@@ -3,12 +3,17 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-#         TWO-POINTER
-#         to keep track of the non-zero indices in the modified array
-        nonZ=0
+#    TWO-POINTER
+        zero=0
         for i in range(len(nums)):
-            if nums[i]!=0 :
-                nums[nonZ]=nums[i]
-                if nonZ!=i:
-                    nums[i]=0
-                nonZ+=1
+            if nums[i]!=0:
+                temp=nums[zero]
+                nums[zero]=nums[i]
+                nums[i]=temp
+                zero+= 1
+            
+
+
+                    
+            
+        
