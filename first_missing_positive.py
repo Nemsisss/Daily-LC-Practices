@@ -1,23 +1,16 @@
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         # If a positive integer is not in the given array it, the missing integer must be in the range [1..n]
-        # So, If an integer is missing it must be in the range [1..n], if an integer is not missing then the answer is n+1.
-
-        #O(1) space and O(n) time
-        # sumWithoutMissing= 0
-        # sumWithMissing=0
-        # for i in range(1,len(nums)+1):
-        #     if nums[i-1]>0:
-        #         sumWithMissing+= nums[i-1]
-        #     sumWithoutMissing+=i
-        # print(sumWithoutMissing, sumWithMissing)
-        # return 1
-        
-        # using O(n) space and O(n)time
-        numsSet=set(nums)
+    
+        # using O(1) space and O(n)time
+        originalLen=len(nums)
+        # convert the array to a set, so that lookup will take O(1) time
+        nums=set(nums)
+        # if an integer is not missing then the answer is n+1.
         toRet= len(nums)+1
-        for i in range(1,len(nums)+1):
-            if i not in numsSet:
+        # If an integer is missing it must be in the range [1..n]
+        for i in range(1,originalLen+1):
+            if i not in nums:
                 return i
         return toRet
 
