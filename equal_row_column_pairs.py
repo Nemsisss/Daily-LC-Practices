@@ -22,7 +22,6 @@ class Solution:
         return count
         
         #APPROACH #2
-
         # sizeOfEach= len(grid[0])
         # byCols=[[ 0 for i in range(len(grid))] for i in range(sizeOfEach)]
         # for i in range(sizeOfEach):
