@@ -10,3 +10,26 @@ class Solution:
                     return prefix
 
         return ""
+
+
+########### JS SOLUTION ###########
+# /**
+#  * @param {string} str1
+#  * @param {string} str2
+#  * @return {string}
+#  */
+# var gcdOfStrings = function(str1, str2) {
+#     if (str1+str2 != str2+str1)
+#     {
+#         return "";
+#     }
+#     let index=0;
+#     for(let i=1; i<= Math.min(str1.length, str2.length); i++)
+#     {
+#         if(str1.length %i==0 && str2.length%i==0)
+#         {
+#             index=i;
+#         }
+#     }
+#     return str1.substr(0, index);
+# };
